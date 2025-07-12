@@ -1,3 +1,101 @@
 2025-07-10 13:11:21.905903Z jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
 The object is already closed [90007-232]
+2025-07-11 15:51:10.293208Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "project_count" не найден
+Column "project_count" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.findLongestProject(DatabaseQueryService.java:76)
+	at DatabaseQueryService.main(DatabaseQueryService.java:146)
+2025-07-11 15:51:10.298047Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "project_count" не найден
+Column "project_count" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3518)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.findMaxSalaryWorker(DatabaseQueryService.java:100)
+	at DatabaseQueryService.main(DatabaseQueryService.java:151)
+2025-07-11 15:51:10.300775Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "project_count" не найден
+Column "project_count" not found [42122-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
+	at DatabaseQueryService.findYoungestEldestWorkers(DatabaseQueryService.java:124)
+	at DatabaseQueryService.main(DatabaseQueryService.java:156)
+2025-07-11 17:07:49.334901Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "Google"
+Data conversion error converting "Google" [22018-232]
+2025-07-11 17:07:49.341963Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "DATE to INTEGER"
+Data conversion error converting "DATE to INTEGER" [22018-232]
+2025-07-11 17:18:04.578110Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "DATE to INTEGER"
+Data conversion error converting "DATE to INTEGER" [22018-232]
+2025-07-11 17:29:56.429376Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-11 17:29:56.433897Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-11 17:29:56.434442Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:07:28.997916Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:07:29.002087Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:07:29.003668Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:12:40.650051Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:12:40.654361Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:12:40.655103Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:22:30.632803Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:22:30.637218Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:22:30.637959Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:28:59.414565Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:28:59.418335Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 08:28:59.418904Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-232]
+2025-07-12 09:02:34.780618Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
+Invalid value "null" for parameter "SQL" [90008-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1255)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
+	at DatabaseQueryService.findLongestProject(DatabaseQueryService.java:48)
+	at DatabaseQueryService.main(DatabaseQueryService.java:125)
