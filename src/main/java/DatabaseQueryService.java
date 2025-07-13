@@ -22,13 +22,13 @@
 // Запусти так кожний метод, і переконайсь, що він повертає коректну інформацію
 //      і під час запуску ніде не виникають Exceptions.
 
-import BehaviorDB.Database;
-import BehaviorDB.DatabaseInitService;
-import BehaviorDB.DatabasePopulateService;
-import SQL_QueryResources.LongestProject;
-import SQL_QueryResources.MaxProjectCountClient;
-import SQL_QueryResources.MaxSalaryWorker;
-import SQL_QueryResources.YoungestEldestWorkers;
+import behavior.db.Database;
+import behavior.db.DatabaseInitService;
+import behavior.db.DatabasePopulateService;
+import behavior.db.model.LongestProject;
+import behavior.db.model.MaxProjectCountClient;
+import behavior.db.model.MaxSalaryWorker;
+import behavior.db.model.YoungestEldestWorkers;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -40,7 +40,7 @@ import java.util.List;
 public class DatabaseQueryService {
     public List<LongestProject> findLongestProject() throws Exception {
         List<LongestProject> result = new ArrayList<>();
-        String sqlQuery = "";
+        String sqlQuery;
         try {
             sqlQuery = Files.readString(Paths.get("sql/find_longest_project.sql"));
         } catch (IOException e) {
@@ -48,8 +48,8 @@ public class DatabaseQueryService {
         }
 
         Connection connection = Database.getInstance().getConnection();
-        Statement statement = connection.createStatement();
-        try (ResultSet resultSet = statement.executeQuery(sqlQuery)) {
+        try (Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlQuery)) {
             while (resultSet.next()) {
                 String nameClient = resultSet.getString("name");
                 result.add(new LongestProject(nameClient));
@@ -62,7 +62,7 @@ public class DatabaseQueryService {
 
     public List<MaxProjectCountClient> findMaxProjectsClient() throws Exception {
         List<MaxProjectCountClient> result = new ArrayList<>();
-        String sqlQuery = "";
+        String sqlQuery;
         try {
             sqlQuery = Files.readString(Paths.get("sql/find_max_projects_client.sql"));
         } catch (IOException e) {
@@ -70,8 +70,8 @@ public class DatabaseQueryService {
         }
 
         Connection connection = Database.getInstance().getConnection();
-        Statement statement = connection.createStatement();
-        try (ResultSet resultSet = statement.executeQuery(sqlQuery)) {
+        try (Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlQuery)) {
             while (resultSet.next()) {
                 String clientName = resultSet.getString("name");
                 int projectCount = resultSet.getInt("project_count");
@@ -85,7 +85,7 @@ public class DatabaseQueryService {
 
     public List<MaxSalaryWorker> findMaxSalaryWorker() throws Exception {
         List<MaxSalaryWorker> result = new ArrayList<>();
-        String sqlQuery = "";
+        String sqlQuery;
         try {
             sqlQuery = Files.readString(Paths.get("sql/find_max_salary_worker.sql"));
         } catch (IOException e) {
@@ -93,8 +93,8 @@ public class DatabaseQueryService {
         }
 
         Connection connection = Database.getInstance().getConnection();
-        Statement statement = connection.createStatement();
-        try (ResultSet resultSet = statement.executeQuery(sqlQuery)) {
+        try (Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlQuery)) {
             while (resultSet.next()) {
                 String clientName = resultSet.getString("name");
                 int salary = resultSet.getInt("salary");
@@ -108,7 +108,7 @@ public class DatabaseQueryService {
 
     public List<YoungestEldestWorkers> findYoungestEldestWorkers() throws Exception {
         List<YoungestEldestWorkers> result = new ArrayList<>();
-        String sqlQuery = "";
+        String sqlQuery;
         try {
             sqlQuery = Files.readString(Paths.get("sql/find_youngest_eldest_workers.sql"));
         } catch (IOException e) {
@@ -116,8 +116,8 @@ public class DatabaseQueryService {
         }
 
         Connection connection = Database.getInstance().getConnection();
-        Statement statement = connection.createStatement();
-        try (ResultSet resultSet = statement.executeQuery(sqlQuery)){
+        try (Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(sqlQuery)){
             while (resultSet.next()) {
                 String clientName = resultSet.getString("name");
                 Date birthday = resultSet.getDate("birthday");
